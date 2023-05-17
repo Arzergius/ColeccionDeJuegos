@@ -14,6 +14,7 @@
 		B6D11A162A1530AA00204482 /* ColeccionDeJuegos.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B6D11A142A1530AA00204482 /* ColeccionDeJuegos.xcdatamodeld */; };
 		B6D11A182A1530AB00204482 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6D11A172A1530AB00204482 /* Assets.xcassets */; };
 		B6D11A1B2A1530AB00204482 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6D11A192A1530AB00204482 /* LaunchScreen.storyboard */; };
+		B6D11A252A153E7500204482 /* JuegosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D11A242A153E7500204482 /* JuegosViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		B6D11A172A1530AB00204482 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B6D11A1A2A1530AB00204482 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B6D11A1C2A1530AB00204482 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6D11A242A153E7500204482 /* JuegosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuegosViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				B6D11A192A1530AB00204482 /* LaunchScreen.storyboard */,
 				B6D11A1C2A1530AB00204482 /* Info.plist */,
 				B6D11A142A1530AA00204482 /* ColeccionDeJuegos.xcdatamodeld */,
+				B6D11A242A153E7500204482 /* JuegosViewController.swift */,
 			);
 			path = ColeccionDeJuegos;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6D11A252A153E7500204482 /* JuegosViewController.swift in Sources */,
 				B6D11A102A1530AA00204482 /* ViewController.swift in Sources */,
 				B6D11A0C2A1530AA00204482 /* AppDelegate.swift in Sources */,
 				B6D11A0E2A1530AA00204482 /* SceneDelegate.swift in Sources */,

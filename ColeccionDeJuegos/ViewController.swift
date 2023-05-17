@@ -6,12 +6,39 @@
 //
 
 import UIKit
+//LINEA DE PRUEBA DEL GIT
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return juegos.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        let juego = juegos[indexPath.row]
+        cell.textLabel?.text = juego.titulo
+        cell.imageView?.image = UIImage(data: (juego.imagen!))
+        return cell
+    }
+    
 
-class ViewController: UIViewController {
-
+    @IBOutlet weak var tableView: UITableView!
+    var juegos : [Juego] = []
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        tableView.dataSource = self
+        tableView.delegate = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        do{
+            try juegos = context.fetch(Juego.fetchRequest())
+            tableView.reloadData()
+        }catch{
+            
+        }
     }
 
 
