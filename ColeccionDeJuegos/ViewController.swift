@@ -9,7 +9,10 @@ import UIKit
 //LINEA DE PRUEBA DEL GIT
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let juego = juegos[indexPath.row]
+        performSegue(withIdentifier: "juegoSegue", sender: juego)
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return juegos.count
     }
@@ -23,6 +26,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        let siguienteVC = segue.destination as! JuegosViewController
+        siguienteVC.juego = sender as? Juego
+    }
+    
     @IBOutlet weak var tableView: UITableView!
     var juegos : [Juego] = []
     override func viewDidLoad() {
